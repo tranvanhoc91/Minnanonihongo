@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vocabulary Add New</title>
+
+
+    <!-- jQuery Mobile references -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+	
+	<!-- PhoneGap references -->
+	
+	<!-- MinnanoNihongo references -->
+	<link rel="stylesheet" href="css/style.css" />
+	
+	
+	<style type="text/css">
+	.ui-field-contain div.ui-slider-switch {
+	    width: 17em !important;
+	}
+	</style>
+</head>
+
+<body>
+
+<!-- Start  page -->
+<div data-role="page" >
+
+	<div id="minna-header" data-role="header" style="border:none;" data-theme="b" data-position="fixed" >
+	    <h1>Add new world</h1>
+	    <a href="#" class="ui-btn ui-btn-left ui-mini ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel</a>
+	    <button class="ui-btn ui-btn-right ui-mini ui-btn-inline ui-corner-all ui-btn-icon-right btn-theme-b ui-icon-check">Save</button>
+	</div><!-- /header -->
+	
+	<!-- content -->
+	
+	<div data-role="navbar">
+        <ul>
+            <li><a href="#" data-ajax="false" class="ui-btn-active"><span style="float:left;">Lesson 1 : What is this?</span></a></li>
+        </ul>
+    </div><!-- /navbar -->
+	<div id="minna-content" data-role="content" role="main" >
+	    <!-- Flip switch -->
+	    <div id="flip-switch">
+	    <select  data-bind="options: ['Hiragana','Katakana'], value: Partecipating" data-role="slider" >
+	    </select>
+	    
+	    <br/>
+	    <script type="text/javascript">
+            viewModel = {
+                Partecipating: ko.observable('Yes'),
+                Vote: ko.observable('Yes')
+            };
+            ko.applyBindings(viewModel);
+        </script>
+	    </div><!-- /Flip switch -->
+	    
+	    <!-- input text -->
+	    <div id="input-field">
+	    
+	        <!-- Form -->
+	        <form>
+	        <label for="text-5">Kanji</label>
+	        <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value="">
+	        <label for="text-5">Han</label>
+	        <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value="">
+	        <label for="text-5">Hiragana</label>
+	        <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value="">
+	        <label for="text-5">Mean(en)</label>
+	        <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value="">
+	        <label for="text-5">Mean(vi)</label>
+	        <input type="text" data-clear-btn="true" data-mini="true" name="text-5" id="text-5" value="">
+	        <label for="textarea-4">Note</label>
+	        <textarea data-mini="true" cols="40" rows="8" name="textarea-4" id="textarea-4"></textarea>
+	        </form>
+	        <!-- /Form -->
+	    
+	    
+	    </div><!-- /input text -->
+	
+	</div>
+	<!-- /content -->
+
+	<div id="minna-footer" data-role="footer" style="border:none;">
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

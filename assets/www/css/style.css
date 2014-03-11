@@ -1,0 +1,48 @@
+
+.body{
+	
+}
+
+
+/* MainHome page */
+#minna-mainpage{ 
+	width:100%;
+	height:auto;
+}
+
+
+
+#minna-mainpage{
+	background-image:url('../img/bg_menu_home.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+
+#block-grid-button{
+	 background:none;
+	 display:block;
+	 width:100%;
+	 align-text:center;"
+}
+
+
+
+
+
+/* custom icons */
+.ui-icon-vacabulary,
+.ui-icon-listening {
+	background-image: url(../img/icons/icon_button_menu_home.png) ;
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+}
+
+.ui-icon-vacabulary {
+	background-position: 10px 50%;
+}
+
+.ui-icon-listening  {
+	background-position: -36px 50%;
+}
